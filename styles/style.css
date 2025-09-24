@@ -24,10 +24,6 @@
   margin: 0;
 }
 
-/* FIXED: Removed this problematic selector */
-/* .header__links-list-item + .header__dot {
-  margin-left: 80px;
-} */
 
 .header__links-list-item_no-bullit { 
   list-style: none; 
@@ -80,23 +76,6 @@
   text-decoration: underline;
 }
 
-/* REMOVED: This conflicting .menu section that wasn't being used in HTML */
-/* .menu {
-  display: flex;
-  gap: 20px;
-  list-style: circle;
-  padding: 0;
-  margin: 0;
-}
-
-.menu__item {
-  font: 400 18px/1.3 Raleway, Arial, sans-serif;
-}
-
-.menu__item a {
-  color: #000;
-  text-decoration: none;
-} */
 
 /* Общие */
 .container {
@@ -111,12 +90,6 @@
   text-transform: uppercase;
 }
 
-/* REMOVED: Empty selectors that do nothing */
-/* .header { }
-.nav { }
-.nav__link { }
-.logo { }
-.contacts { } */
 
 /* Обложка */
 .cover {
@@ -130,7 +103,6 @@
   gap: 32px;
 }
 
-/* FIXED: Added overlay for cover */
 .cover .overlay {
   position: absolute;
   inset: 0;
@@ -138,7 +110,6 @@
   z-index: 1;
 }
 
-/* FIXED: Ensure content is above overlay */
 .cover > *:not(.overlay) {
   position: relative;
   z-index: 2;
@@ -154,7 +125,6 @@
   margin: 0; /* ADDED: Remove default margin */
 }
 
-/* FIXED: Match HTML class names */
 .aligned-text {
   display: block;
   letter-spacing: 30px;
@@ -168,7 +138,6 @@
   text-align: right;
 }
 
-/* REMOVED: Duplicate cover__title-word classes that don't match HTML */
 
 .cover__description {
   display: flex;
@@ -183,10 +152,9 @@
   text-transform: uppercase;
   word-spacing: 18px;
   max-width: 70%;
-  margin: 0; /* ADDED: Remove default margin */
+  margin: 0; 
 }
 
-/* FIXED: Match HTML class name */
 .letter-spacing-extended {
   letter-spacing: 60px;
 }
