@@ -18,30 +18,25 @@
 <body>
 
   <!-- Header -->
-  <header id="header">
-  <div style="max-width:1100px; height:293px; position:relative; overflow:hidden; margin:0 auto;">
-  <div style="width: 236.49px; left: 811px; top: 144px; position: absolute; color: black; font-size: 18px; font-family: Raleway; font-weight: 400; line-height: 24.30px; word-wrap: break-word">наб. Принсенграхт 263- 265, Амстердам</div>
-  <div style="width: 129.72px; height: 0px; left: 810px; top: 143px; position: absolute; border: 1px black solid; box-sizing: border-box;"></div>
-  <div style="width: 239.48px; height: 24px; left: 810px; top: 119px; position: absolute; color: black; font-size: 18px; font-family: Raleway; font-weight: 400; line-height: 24.30px; word-wrap: break-word">info@sobaka.ge</div>
-  <div style="width: 131.71px; height: 0px; left: 810.52px; top: 119px; position: absolute; border: 1px black solid; box-sizing: border-box;"></div>
-  <div style="width: 239.48px; height: 24px; left: 810.52px; top: 95px; position: absolute; color: black; font-size: 18px; font-family: Raleway; font-weight: 400; line-height: 24.30px; word-wrap: break-word">+9 999 555 5555</div>
+  <header class="header">
+  <nav class="header__nav">
+    <a class="header__link" href="#">главная</a>
+    <span class="header__dot" aria-hidden="true"></span>
+    <a class="header__link" href="#lots">посмотреть лоты</a>
+    <span class="header__dot" aria-hidden="true"></span>
+    <a class="header__link" href="#about">об аукционе</a>
+  </nav>
 
-  <a href="" aria-label="На главную"
-   style="width: 148px; height: 105px; left: 478px; top: 92px; position: absolute; overflow: hidden; display:block;">
-  <img src="imgs/border.png" alt="Рамка логотипа"
-       style="width: 124.05px; height: 94.84px; left: 11.39px; top: 2.79px; position: absolute; border: 6px black solid; box-sizing: border-box;">
-  <img src="imgs/text.png" alt="Текст логотипа"
-       style="width: 129.11px; height: 104.65px; left: 9.03px; top: 1.16px; position: absolute;">
-</a>
+  <a class="header__logo" href="/" aria-label="На главную">
+    <img src="imgs/logo.png" alt="Логотип аукциона">
+  </a>
 
-  <div style="width: 110px; height: 0px; left: 331.48px; top: 155px; position: absolute; border: 1px black solid; box-sizing: border-box;"></div>
-  <div style="left: 331.48px; top: 133px; position: absolute; color: black; font-size: 18px; font-family: Raleway; font-weight: 400; word-wrap: break-word">об аукционе</div>
-  <div style="width: 6px; height: 6px; left: 312px; top: 142px; position: absolute; border-radius: 9999px; border: 0.50px black solid"></div>
-  <div style="width: 151px; height: 0px; left: 148.48px; top: 155px; position: absolute; border: 1px black solid; box-sizing: border-box;"></div>
-  <div style="left: 148.48px; top: 133px; position: absolute; color: black; font-size: 18px; font-family: Raleway; font-weight: 400; word-wrap: break-word">посмотреть лоты</div>
-  <div style="width: 6px; height: 6px; left: 130px; top: 142px; position: absolute; border-radius: 9999px; border: 0.50px black solid"></div>
-  <div style="left: 50px; top: 133px; position: absolute; color: black; font-size: 18px; font-family: Raleway; font-weight: 400; word-wrap: break-word">главная</div>
-	</div>
+  <address class="header__addr">
+    <a href="tel:+99995555555" class="header__addr-link">+9 999 555 5555</a><br>
+    <a href="mailto:info@sobaka.ge" class="header__addr-link">info@sobaka.ge</a>
+    <div class="header__addr-line"></div>
+    наб. Принсенграхт 263–265, Амстердам
+  </address>
 </header>
 
 <main id="main-content">
