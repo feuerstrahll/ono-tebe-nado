@@ -24,7 +24,6 @@
   margin: 0;
 }
 
-
 .header__links-list-item_no-bullit { 
   list-style: none; 
 }
@@ -122,7 +121,7 @@
   line-height: 1.1;
   text-transform: uppercase;
   color: #fff;
-  margin: 0; /* ADDED: Remove default margin */
+  margin: 0; 
 }
 
 .aligned-text {
@@ -274,8 +273,6 @@
   gap: 72px;
   padding: 60px 40px;
 }
-
-.about__column { }
 
 .about__logo {
   width: var(--logo-d);
