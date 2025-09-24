@@ -1,1 +1,51 @@
-/* место для вашего кода */
+/* Общие */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.section-title {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Шапка */
+.header { }
+.nav { }
+.nav__link { }
+.logo { }
+.contacts { }
+
+/* Обложка */
+.cover { position: relative; }
+.cover__title { }
+.description { }
+.description__text { }
+.btn { }
+.btn--outline { }
+
+/* Лоты */
+.lots { }
+.lots__list { list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; }
+.lots__item { }
+.lots__link { text-decoration: none; }
+.card { }
+.card__title { }
+.card__text { }
+.lots__more { }
+
+/* Об аукционе */
+.about { display: flex; gap: 40px; }
+.about__column { }
+.about__column--image { }
+.about__column--text { }
+.about__text { }
+
+/* Подвал */
+.footer { display: flex; justify-content: space-between; }
+.nav--footer { }
+.socials { display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; }
+.socials__item { }
+.socials__link { }/* место для вашего кода */
