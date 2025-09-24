@@ -272,28 +272,147 @@
   color: #000;
   text-decoration: underline;
 }
-/* Об аукционе */
-.about { 
-  margin: 64px auto;
-  padding: 32px 0;
-  display: flex;
-  gap: 40px;
+
+
+/* === ABOUT === */
+/* Грид: левая колонка как ширина карточки (334px), правая — всё остальное */
+.about {
+  --card-col: 334px;   /* ширина колонок карточек в секции «Лоты» */
+  --logo-d: 240px;     /* диаметр чёрного круга */
+  display: grid;
+  grid-template-columns: var(--card-col) 1fr;
+  gap: 72px;           /* интерколоночный отступ как в макете */
+  padding: 60px 40px;  /* внешние отступы секции (подгони по Pixel Perfect) */
 }
+
+/* Левая колонка */
 .about__column { }
-.about__column--image { }
-.about__column--text { }
-.about__text { }
 
-/* Подвал */
-.footer { margin-top: 64px;
-  padding: 32px 0;
-  background: #f5f5f5;
+/* Круглый чёрный контейнер под логотип */
+.about__logo {
+  width: var(--logo-d);
+  height: var(--logo-d);
+  margin: 0 auto;                 /* центр по горизонтали в колонке */
+  background: #000;
+  border-radius: 50%;
+  display: flex;                  /* центрируем логотип внутри круга */
+  align-items: center;
+  justify-content: center;
 }
-.nav--footer { }
-.socials { display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; }
-.socials__item { }
-.socials__link { }/* место для вашего кода */
 
+.about__logo-image {
+  display: block;
+  width: 148px;                   /* подгони по макету */
+  height: 114px;
+  object-fit: contain;
+}
+
+/* Правая колонка */
+.about__column--text {
+  /* чтобы управлять вертикальным выравниванием заголовка относительно центра круга */
+  position: relative;
+}
+
+/* Заголовок на линии центра круга.
+   Центр круга = var(--logo-d)/2 от верхней границы секции;
+   Сдвигаем заголовок вниз верхним полем.
+   Значение подгоняем по Pixel Perfect. */
+.about__title {
+  font: 700 40px/1 Raleway, Arial, sans-serif;
+  text-transform: uppercase;
+  margin: calc(var(--logo-d) / 2 - 20px) 0 24px; 
+  /* -20px — визуальная поправка под высоту строки; подгони в PP */
+  color: #000;
+}
+
+/* Два абзаца: нижний отступ только у первого */
+.about__text p {
+  font: 400 20px/24px Raleway, Arial, sans-serif;
+  color: #000;
+  margin: 0;
+}
+.about__text p:first-child { margin: 0 0 18px; }  /* только первый абзац с отступом */
+
+/* Адаптация при переносе: если ширина меньше — колонки станут рядами */
+@media (max-width: 900px) {
+  .about {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about__title {
+    margin: 0 0 16px;
+  }
+  .about__logo {
+    margin-bottom: 8px;
+  }
+}
+
+/* === FOOTER === */
+.footer {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr; /* адрес — меню — соцсети */
+  align-items: start;
+  padding: 60px 40px;
+  font: 400 16px/1.25 Raleway, Arial, sans-serif;
+  color: #000;
+}
+
+/* Адрес */
+.footer__address {
+  font-style: normal; /* убираем курсив у <address> */
+  max-width: 240px;
+}
+.footer__address a {
+  display: inline-block;
+  text-decoration: underline;
+  color: #000;
+  margin-bottom: 4px;
+}
+
+/* Центральное меню */
+.footer__menu {
+  justify-self: center;
+}
+.footer__menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.footer__menu-list-item {
+  margin-bottom: 4px;
+}
+.footer__menu-link {
+  color: #000;
+  text-decoration: underline;
+}
+.footer__menu-link_active {
+  text-decoration: none; /* активная без подчёркивания */
+  font-weight: 700;
+}
+
+/* Соцсети */
+.footer__social-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  justify-self: end;
+}
+.footer__social-link {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+.footer__social-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
 /* Повторяющееся оформление */
 .block--dark {
   background: rgba(0,0,0,0.6);
