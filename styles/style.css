@@ -1,3 +1,66 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr; /* центр фикс по содержимому (логотип) */
+  align-items: center;                        /* по вертикали — по центру */
+  column-gap: 24px;
+  padding: 24px 50px;                         /* паддинги шапки сверху/снизу и по бокам */
+}
+
+/* Меню слева */
+.header__nav {
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 18px;                                  /* расстояние между пунктами/точками */
+}
+
+.header__link {
+  font: 400 18px/1.35 Raleway, Arial, sans-serif;
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-transform: none;
+}
+
+/* Круглые разделители между ссылками (как в макете) */
+.header__dot {
+  width: 6px;
+  height: 6px;
+  border: 0.5px solid #000;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Логотип строго по центру страницы */
+.header__logo {
+  justify-self: center;          /* центр средней колонки */
+  display: inline-block;
+  width: max-content;            /* чтобы колонка была по содержимому (min-content работает, но max-content гарантированно не растянет) */
+}
+.header__logo img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Адрес справа */
+.header__addr {
+  justify-self: end;
+  text-align: right;
+  font: 400 16px/1.25 Raleway, Arial, sans-serif;
+  font-style: normal;            /* address по умолчанию курсив — выключаем */
+  color: #000;
+}
+.header__addr-link {
+  color: #000;
+  text-decoration: underline;
+}
+.header__addr-line {
+  margin: 6px 0 8px;
+  height: 1px;
+  background: #000;              /* тонкая линия как в макете */
+}
+
 /* Общие */
 .container {
   max-width: 1100px;
