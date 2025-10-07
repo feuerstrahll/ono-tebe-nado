@@ -1,19 +1,9 @@
-h1, h2, h3, p, ul { margin: 0; padding: 0; }
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden;
-  padding-right: 0;
-} 
-
 .header {
   display: grid;
   grid-template-columns: 1fr min-content 1fr;
   align-items: center;
   box-sizing: border-box;
   min-height: 293px;
-  padding-right: 50px;
-  padding-left: 50px;
 }
 
 .header_menu ul {
@@ -26,6 +16,7 @@ html, body {
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
   list-style: circle;
+  padding-left: 50px;
 }
 
 .header__links-list-item_no-bullit {
@@ -46,7 +37,7 @@ html, body {
 }
 
 .address {
-  width: 240px;
+  width: 290px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -68,7 +59,6 @@ html, body {
 /* ------------------------------------------------------ */
 
 .cover {
-  margin-top: 29px;
   position: relative;
   z-index: 0;
   box-sizing: border-box;
@@ -76,7 +66,7 @@ html, body {
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-x: center;
+  background-position: center;
 }
 
 .cover_title {
@@ -85,18 +75,13 @@ html, body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 100px;
-  line-height: 115px; /* как в эталоне */
-  letter-spacing: 30px; /* как в эталоне */
+  line-height: 130px;
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
   text-transform: uppercase;
-  position: relative;
-  z-index: 2;
+  letter-spacing: 0.3em;
 }
 
-/* .no-letter-spacing {
-  margin-right: -0.3em;
-} */
 
 .accent-span {
   display: block;
@@ -128,8 +113,6 @@ html, body {
   text-underline-position: from-font;
   text-transform: uppercase;
   word-spacing: 20px;
-  position: relative;
-  z-index: 2;
 }
 
 .bet-button {
@@ -146,8 +129,6 @@ html, body {
   text-underline-position: from-font;
   text-transform: uppercase;
   background-color: transparent;
-  position: relative;
-  z-index: 2;
 }
 
 .bet-button:hover {
@@ -164,7 +145,7 @@ html, body {
 .overlay {
   position: absolute;
   inset: 0;
-  z-index: -1; 
+  z-index: -1;
   width: 100%;
   height: 100%;
   opacity: 0.6;
@@ -174,7 +155,8 @@ html, body {
 /* ----------------------------------------------------- */
 
 .lots {
-  padding: 40px 24px 0;
+  margin-top: 180px;
+  padding: 0 24px;
 }
 
 .lots__heading {
@@ -186,9 +168,7 @@ html, body {
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
   text-transform: uppercase;
-  margin-top: 0;
 }
-
 
 .lots__card-list {
   display: flex;
@@ -211,7 +191,7 @@ html, body {
 
 .lot_content {
   position: relative;
-  z-index: 1;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -273,20 +253,17 @@ html, body {
   background-position: bottom;
 }
 
-.card_type {
-  background-size: cover;
-  background-position: bottom;
-}
-
 /* ------------------------------------------------------ */
-
 .about {
   display: grid;
   grid-template-columns: 334px 1fr;
   box-sizing: border-box;
   min-height: 595px;
-  padding: 80px 24px 0;
+  margin-top: 120px;
+  padding: 0 24px;
 }
+
+
 
 .about__logo {
   position: relative;
@@ -307,7 +284,6 @@ html, body {
 
 .about__title {
   margin-bottom: 100px;
-  margin-top: 0;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 40px;
